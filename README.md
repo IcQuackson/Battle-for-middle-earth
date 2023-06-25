@@ -1,4 +1,4 @@
-# LOTR Battle Simulator
+# Battle For Middle Earth Battle Simulator
 
 ## Description
 
