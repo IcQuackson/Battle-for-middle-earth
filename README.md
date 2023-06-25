@@ -1,22 +1,20 @@
-# Battle For Middle Earth Battle Simulator
+# Battle for Middle Earth Simulator
+
+![Battle for Middle Earth Simulator](lorem-ipsum-image-link)
 
 ## Description
 
-The LOTR Battle Simulator is a Java-based application that brings the epic battles from the Lord of the Rings universe to life. The project utilizes Maven as a build tool and leverages JavaFX for designing an immersive graphical user interface (GUI). This simulation app allows users to experience the thrill of commanding two armies as they clash in epic confrontations reminiscent of the iconic battles depicted in J.R.R. Tolkien's beloved fantasy series.
+The Battle for Middle Earth Simulator is a Java-based application that allows you to simulate epic battles inspired by the Lord of the Rings universe. The project utilizes Maven as a build tool and leverages JavaFX to create a user-friendly graphical interface (GUI). In this simulator, you can choose heroes and beasts, edit their attributes, remove them from the battlefield, and instantly simulate the battle outcome. The application provides a log of the battles, allowing you to review the detailed results.
 
 ## Features
 
-- **Army Creation**: Create and customize two armies representing different factions from the Lord of the Rings universe. Assign unique attributes to units such as health, attack power, and defense.
+- **Hero and Beast Selection**: Choose heroes and beasts from the Lord of the Rings universe to participate in the battle.
 
-- **Battle Simulation**: Watch the battlefield come alive with visually appealing representations of mountains, forests, and rivers. Units from both armies engage in strategic combat in real-time.
+- **Attribute Editing**: Customize the attributes of heroes and beasts, including health, attack power, and defense.
 
-- **Real-time Feedback**: Receive vital information during battles, including unit health, army strength, and overall battle progress. Make informed decisions and adjust strategies on-the-fly.
+- **Battle Simulation**: Instantly simulate the battle outcome based on the selected heroes and beasts.
 
-- **Commanding Units**: Issue commands to units, directing attacks, strategic movements, and utilizing special abilities. Your decisions impact the outcome of the battle.
-
-- **Rich Lord of the Rings Theme**: Immerse yourself in Middle-earth with intricate maps, distinctive character designs, and iconic sound effects.
-
-- **Replay and Statistics**: Replay battles or review detailed statistics after each battle. Analyze outcomes and improve your strategies.
+- **Battle Log**: View a detailed log of each battle, providing insights into the progression and results.
 
 ## Installation
 
