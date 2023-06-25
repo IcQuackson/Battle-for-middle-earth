@@ -30,5 +30,4 @@ The LOTR Battle Simulator is a Java-based application that brings the epic battl
 1. Launch the application.
 2. Create and customize your armies.
 3. Start the battle simulation.
-4. Issue commands to units and observe the battle progress.
-5. Analyze battle outcomes and make adjustments for future battles.
+4. Analyze battle outcomes and make adjustments for future battles.
