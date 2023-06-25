@@ -20,7 +20,7 @@ The LOTR Battle Simulator is a Java-based application that brings the epic battl
 
 ## Installation
 
-1. Clone the repository: `git clone [[repository-link]](https://github.com/IcQuackson/Battle-for-middle-earth.git)`
+1. Clone the repository: `git clone https://github.com/IcQuackson/Battle-for-middle-earth.git`
 2. Install Maven: [Maven Installation Guide](https://maven.apache.org/install.html)
 3. Build the project: `mvn clean install`
 4. Run the application: `mvn javafx:run`
