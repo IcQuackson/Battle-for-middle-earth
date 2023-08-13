@@ -4,16 +4,12 @@ import com.tokioschool.model.Board;
 import com.tokioschool.model.BoardManager;
 import com.tokioschool.model.CharacterType;
 import com.tokioschool.model.GameUnit;
-import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 

@@ -24,9 +24,14 @@ public class Main
         do
         {
             input = battleConsole.getInt(message, 3);
-            if (input == 1)
+            if (input == 1) {
                 battleConsole.run();
-
+                break;
+            }
+            if (input == 2) {
+                BattleGUIStarter.main(null);
+                break;
+            }
         } while (input != 3);
         scanner.close();
     }
