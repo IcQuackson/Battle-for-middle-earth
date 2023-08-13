@@ -23,12 +23,4 @@ The Battle for Middle Earth Simulator is a Java-based application that allows yo
 
 1. Clone the repository: `git clone https://github.com/IcQuackson/Battle-for-middle-earth.git`
 2. Install Maven: [Maven Installation Guide](https://maven.apache.org/install.html)
-3. Build the project: `mvn clean install`
-4. Run the application: `mvn javafx:run`
-
-## Usage
-
-1. Launch the application.
-2. Create and customize your armies.
-3. Start the battle simulation.
-4. Analyze battle outcomes and make adjustments for future battles.
+3. Run the application by running the bat file: `runApp.bat`
