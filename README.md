@@ -6,6 +6,9 @@
 
 The Battle for Middle Earth Simulator is a Java-based application that allows you to simulate epic battles inspired by the Lord of the Rings universe. The project utilizes Maven as a build tool and leverages JavaFX to create a user-friendly graphical interface (GUI). In this simulator, you can choose heroes and beasts, edit their attributes, remove them from the battlefield, and instantly simulate the battle outcome. The application provides a log of the battles, allowing you to review the detailed results.
 
+![image](https://github.com/IcQuackson/Battle-for-middle-earth/assets/61185097/8d75d713-39be-4514-bba7-63b690f59b84)
+
+
 ## Features
 
 - **Hero and Beast Selection**: Choose heroes and beasts from the Lord of the Rings universe to participate in the battle.
