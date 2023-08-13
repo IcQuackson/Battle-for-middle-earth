@@ -5,18 +5,10 @@ import java.util.*;
 public class BoardManager
 {
     private final Board board;
-    private final Scanner scanner;
-
-    public BoardManager(Board board, Scanner scanner)
-    {
-        this.board = board;
-        this.scanner = scanner;
-    }
 
     public BoardManager(Board board)
     {
         this.board = board;
-        this.scanner = new Scanner(System.in);
     }
 
     private ArrayList<GameUnit> getHeroArmy()

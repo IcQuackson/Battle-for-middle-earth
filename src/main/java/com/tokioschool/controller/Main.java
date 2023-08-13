@@ -4,9 +4,6 @@ import com.tokioschool.model.Board;
 import com.tokioschool.model.BoardManager;
 import com.tokioschool.view.BattleConsole;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.stage.Stage;
-
 import java.util.Scanner;
 
 public class Main
@@ -16,8 +13,8 @@ public class Main
         int input;
         Scanner scanner = new Scanner(System.in);
         Board board = new Board();
-        BoardManager boardManager = new BoardManager(board, scanner);
-        com.tokioschool.view.BattleConsole battleConsole = new BattleConsole(boardManager, scanner);
+        BoardManager boardManager = new BoardManager(board);
+        BattleConsole battleConsole = new BattleConsole(boardManager);
         String message = """
                 Por favor escolha o modo de execução:
                 1. Modo consola
@@ -33,7 +30,7 @@ public class Main
             }
             if (input == 2) {
                 Thread javaFXThread = new Thread(() -> {
-                    Application.launch(BattleGUIController.class, args);
+                    Application.launch(BattleGUIApplication.class, args);
                 });
                 javaFXThread.start();
                 break;

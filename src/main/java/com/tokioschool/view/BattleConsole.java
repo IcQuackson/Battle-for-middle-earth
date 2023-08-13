@@ -12,10 +12,10 @@ public class BattleConsole
     private BoardManager boardManager;
     private Scanner scanner;
 
-    public BattleConsole(BoardManager boardManager, Scanner scanner)
+    public BattleConsole(BoardManager boardManager)
     {
         this.boardManager = boardManager;
-        this.scanner = scanner;
+        this.scanner = new Scanner(System.in);
     }
 
     public void run()
