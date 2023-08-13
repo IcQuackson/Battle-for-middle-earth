@@ -3,6 +3,9 @@ package com.tokioschool.controller;
 import com.tokioschool.model.Board;
 import com.tokioschool.model.BoardManager;
 import com.tokioschool.view.BattleConsole;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.stage.Stage;
 
 import java.util.Scanner;
 
@@ -29,7 +32,10 @@ public class Main
                 break;
             }
             if (input == 2) {
-                BattleGUIStarter.main(null);
+                Thread javaFXThread = new Thread(() -> {
+                    Application.launch(BattleGUIController.class, args);
+                });
+                javaFXThread.start();
                 break;
             }
         } while (input != 3);

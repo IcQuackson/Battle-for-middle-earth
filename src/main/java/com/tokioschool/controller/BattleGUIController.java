@@ -25,10 +25,6 @@ import java.util.ResourceBundle;
 
 public class BattleGUIController extends Application
 {
-
-
-    // Game State
-
     public static void main(String[] args)
     {
         launch(args);
@@ -38,7 +34,12 @@ public class BattleGUIController extends Application
     public void start(Stage primaryStage)
     {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/tokioschool/controller/BattleGUIApp.fxml")));
+            URL resourceUrl = getClass().getResource("/BattleGUIApp.fxml");
+
+            if (resourceUrl == null) {
+                throw new RuntimeException("FXML resource not found.");
+            }
+            Parent root = FXMLLoader.load(Objects.requireNonNull(resourceUrl));
             Scene scene = new Scene(root, 500, 700);
             Image icon = new Image(new FileInputStream("./src/main/resources/images/one_ring.png"));
             primaryStage.getIcons().add(icon);

@@ -11,7 +11,6 @@
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
@@ -25,38 +24,53 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <!-- here we specify that we want to use the main method within the App class -->
-                            <mainClass>com.tokioschool.controller.BattleGUIStarter</mainClass>
+                            <mainClass>com.tokioschool.controller.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
-        </plugins>
-    </build>
+            <plugin>
+                 <groupId>org.codehaus.mojo</groupId>
+                 <artifactId>exec-maven-plugin</artifactId>
+                 <version>3.1.0</version>
+                 <executions>
+                     <execution>
+                         <goals>
+                             <goal>java</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+                 <configuration>
+                     <mainClass>com.tokioschool.controller.Main</mainClass>
+                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+ </plugins>
+</build>
 
-    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
+<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx</artifactId>
-            <version>11</version>
+            <version>19.0.2.1</version>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>19.0.2</version>
+            <version>19.0.2.1</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>19.0.2.1</version>
         </dependency>
-        <!-- <dependency>
-             <groupId>com.tokioschool</groupId>
-             <artifactId>ProjetoFinal_V2</artifactId>
-             <version>1.0-SNAPSHOT</version>
-         </dependency>-->
-
      </dependencies>
  </project>
