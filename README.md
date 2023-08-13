@@ -1,6 +1,6 @@
 # Battle for Middle Earth Simulator
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FOne_Ring&psig=AOvVaw1Rzi06c9xMQlOkt32xAeaz&ust=1691974794910000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjuxbu32IADFQAAAAAdAAAAABAu)
+![Ring](https://upload.wikimedia.org/wikipedia/commons/d/d4/One_Ring_Blender_Render.png)
 
 ## Description
 
