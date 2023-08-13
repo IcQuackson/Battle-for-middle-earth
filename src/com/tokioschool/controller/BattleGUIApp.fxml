@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="811.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tokioschool.controller.Controller">
+   <children>
+      <AnchorPane layoutX="36.0" layoutY="35.0" prefHeight="234.0" prefWidth="261.0" style="-fx-border-width: 2; -fx-border-color: black;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="76.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="17.0" prefWidth="76.0" text="Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="104.0" prefHeight="17.0" prefWidth="76.0" text="Health">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="149.0" prefHeight="17.0" prefWidth="76.0" text="Armor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="heroNameTxt" layoutX="90.0" layoutY="14.0" prefHeight="25.0" prefWidth="154.0" />
+            <TextField fx:id="heroHealthTxt" layoutX="90.0" layoutY="102.0" prefHeight="25.0" prefWidth="154.0" />
+            <TextField fx:id="heroArmorTxt" layoutX="90.0" layoutY="147.0" prefHeight="25.0" prefWidth="154.0" />
+            <ComboBox fx:id="heroTypeCmb" layoutX="92.0" layoutY="57.0" prefWidth="150.0" />
+            <Button layoutX="60.0" layoutY="195.0" mnemonicParsing="false" onAction="#addHero" prefHeight="20.0" prefWidth="142.0" text="Add" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="36.0" layoutY="306.0" prefHeight="478.0" prefWidth="604.0" style="-fx-border-width: 2; -fx-border-color: black;">
+         <children>
+            <ListView fx:id="heroListView" layoutX="27.0" layoutY="24.0" prefHeight="120.0" prefWidth="234.0" style="-fx-border-width: 2; -fx-border-color: black;" />
+            <Label layoutX="27.0" layoutY="4.0" prefHeight="17.0" prefWidth="50.0" text="Heroes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="26.0" layoutY="152.0" mnemonicParsing="false" onAction="#upHero" prefHeight="25.0" prefWidth="70.0" text="Up" />
+            <Button layoutX="109.0" layoutY="152.0" mnemonicParsing="false" onAction="#downHero" prefHeight="25.0" prefWidth="70.0" text="Down" />
+            <Button fx:id="deleteHeroBtn" layoutX="191.0" layoutY="152.0" mnemonicParsing="false" onAction="#deleteHero" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+            <ListView fx:id="beastListView" layoutX="341.0" layoutY="24.0" prefHeight="120.0" prefWidth="234.0" style="-fx-border-width: 2; -fx-border-color: black;" />
+            <Label layoutX="341.0" layoutY="4.0" prefHeight="17.0" prefWidth="50.0" text="Beasts">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="340.0" layoutY="152.0" mnemonicParsing="false" onAction="#upBeast" prefHeight="25.0" prefWidth="70.0" text="Up" />
+            <Button layoutX="423.0" layoutY="152.0" mnemonicParsing="false" onAction="#downBeast" prefHeight="25.0" prefWidth="70.0" text="Down" />
+            <Button fx:id="deleteBeastBtn" layoutX="505.0" layoutY="152.0" mnemonicParsing="false" onAction="#deleteBeast" prefHeight="25.0" prefWidth="70.0" text="Delete" />
+            <Button fx:id="fightButton" layoutX="267.0" layoutY="199.0" mnemonicParsing="false" onAction="#fightBattle" prefHeight="25.0" prefWidth="70.0" text="FIGHT!" />
+            <TextArea fx:id="battleTxtArea" layoutX="27.0" layoutY="239.0" prefHeight="216.0" prefWidth="550.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="36.0" layoutY="14.0" prefHeight="17.0" prefWidth="50.0" text="Heroes">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="14.0" prefHeight="17.0" prefWidth="50.0" text="Beasts">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="379.0" layoutY="35.0" prefHeight="234.0" prefWidth="261.0" style="-fx-border-width: 2; -fx-border-color: black;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="76.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="17.0" prefWidth="76.0" text="Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="104.0" prefHeight="17.0" prefWidth="76.0" text="Health">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="149.0" prefHeight="17.0" prefWidth="76.0" text="Armor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="beastNameTxt" layoutX="90.0" layoutY="14.0" prefHeight="25.0" prefWidth="154.0" />
+            <TextField fx:id="beastHealthTxt" layoutX="90.0" layoutY="102.0" prefHeight="25.0" prefWidth="154.0" />
+            <TextField fx:id="beastArmorTxt" layoutX="90.0" layoutY="147.0" prefHeight="25.0" prefWidth="154.0" />
+            <ComboBox fx:id="beastTypeCmb" layoutX="92.0" layoutY="57.0" prefWidth="150.0" />
+            <Button layoutX="60.0" layoutY="195.0" mnemonicParsing="false" onAction="#addBeast" prefHeight="20.0" prefWidth="142.0" text="Add" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="36.0" layoutY="286.0" prefHeight="17.0" prefWidth="50.0" text="Battle">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

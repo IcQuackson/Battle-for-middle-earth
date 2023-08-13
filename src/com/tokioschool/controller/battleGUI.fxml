@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="739.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tokioschool.controller.BattleGUIController">
+   <children>
+      <AnchorPane layoutX="28.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="60.0" text="Nome:" />
+            <Label layoutX="14.0" layoutY="43.0" prefHeight="22.0" prefWidth="60.0" text="Tipo:" />
+            <Label layoutX="14.0" layoutY="71.0" prefHeight="22.0" prefWidth="60.0" text="Vida:" />
+            <Label layoutX="14.0" layoutY="100.0" prefHeight="22.0" prefWidth="76.0" text="Armadura:" />
+            <Button layoutX="48.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add" />
+            <TextField layoutX="90.0" layoutY="13.0" prefHeight="25.0" prefWidth="99.0" />
+            <TextField layoutX="90.0" layoutY="70.0" prefHeight="25.0" prefWidth="99.0" />
+            <TextField layoutX="90.0" layoutY="99.0" prefHeight="25.0" prefWidth="99.0" />
+            <ComboBox layoutX="90.0" layoutY="42.0" prefHeight="25.0" prefWidth="99.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="264.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="22.0" prefWidth="60.0" text="Nome:" />
+            <Label layoutX="14.0" layoutY="43.0" prefHeight="22.0" prefWidth="60.0" text="Tipo:" />
+            <Label layoutX="14.0" layoutY="71.0" prefHeight="22.0" prefWidth="60.0" text="Vida:" />
+            <Label layoutX="14.0" layoutY="100.0" prefHeight="22.0" prefWidth="76.0" text="Armadura:" />
+            <Button layoutX="48.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="Add" />
+            <TextField layoutX="90.0" layoutY="13.0" prefHeight="25.0" prefWidth="99.0" />
+            <TextField layoutX="90.0" layoutY="70.0" prefHeight="25.0" prefWidth="99.0" />
+            <TextField layoutX="90.0" layoutY="99.0" prefHeight="25.0" prefWidth="99.0" />
+            <ComboBox layoutX="90.0" layoutY="42.0" prefHeight="25.0" prefWidth="99.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="276.0" prefHeight="438.0" prefWidth="537.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+      <Label layoutX="28.0" layoutY="14.0" prefHeight="17.0" prefWidth="49.0" text="Heroes">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="264.0" layoutY="14.0" prefHeight="17.0" prefWidth="49.0" text="Beasts">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="259.0" prefHeight="17.0" prefWidth="49.0" text="Battle">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
