@@ -1,6 +1,6 @@
 # Battle for Middle Earth Simulator
 
-![Ring](https://upload.wikimedia.org/wikipedia/commons/d/d4/One_Ring_Blender_Render.png)
+![Ring](https://gcdn.thunderstore.io/live/repository/icons/LOTR_UntoldTales-LOTR_The_Untold_Tales-2.3.2.png.256x256_q95.png)
 
 ## Description
 
