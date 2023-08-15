@@ -18,7 +18,11 @@ public class BattleConsole
         this.scanner = new Scanner(System.in);
     }
 
-    public void run()
+    /**
+	 * The "run" function presents a menu to the user and allows them to choose between managing the
+	 * hero army, managing the beast army, simulating a battle, or exiting the program.
+	 */
+	public void run()
     {
         int input;
         String message = """
@@ -42,7 +46,11 @@ public class BattleConsole
         while (input != 4);
     }
 
-    private void manageHeroArmy()
+    /**
+	 * The function "manageHeroArmy" allows the user to perform various operations on a hero army, such
+	 * as displaying the army, adding a hero, removing a hero, and changing the position of a hero.
+	 */
+	private void manageHeroArmy()
     {
         int input;
         String message = """
@@ -70,7 +78,11 @@ public class BattleConsole
         while (input != 6);
     }
 
-    private void manageBeastArmy()
+    /**
+	* The `manageBeastArmy()` method allows the user to perform various operations on a beast army. It
+	* presents a menu to the user with the following options:
+	*/
+	private void manageBeastArmy()
     {
         int input;
         String message = """
@@ -97,21 +109,36 @@ public class BattleConsole
         } while (input != 6);
     }
 
-    public void printHeroArmy()
+    /*
+	* The `printHeroArmy()` method is responsible for printing the hero army.
+	* It first prints the label "Exército - HEROES". Then, it calls the
+	* `printArmy()` method, passing the hero army obtained from the `boardManager.showHeroArmy()`
+	* method. Finally, it prints a new line.
+	*/
+	public void printHeroArmy()
     {
         System.out.printf("Exército - %s:\n", TEAM_HEROES);
         printArmy(boardManager.showHeroArmy());
         System.out.println();
     }
 
-    public void printBeastArmy()
+    /*
+	* The `printBeastArmy()` method is responsible for printing the beast army. It first prints the
+	* label "Exército - BEASTS". Then, it calls the `printArmy()` method, passing the beast army
+	* obtained from the `boardManager.showBeastArmy()` method. Finally, it prints a new line.
+	*/
+	public void printBeastArmy()
     {
         System.out.printf("Exército - %s:\n", TEAM_BEASTS);
         printArmy(boardManager.showBeastArmy());
         System.out.println();
     }
 
-    private void printArmy(ArrayList<String> army)
+	/**
+	 * The printArmy function prints the army passed as a parameter.
+	 * @param army The army to be printed.
+	 */
+	private void printArmy(ArrayList<String> army)
     {
         int i = 1;
         for (String c : army)

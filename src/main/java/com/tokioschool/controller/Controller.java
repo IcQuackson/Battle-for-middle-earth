@@ -50,7 +50,13 @@ public class Controller implements Initializable {
         setComboBoxes();
     }
 
-    @FXML
+    /**
+	 * The function adds a hero to a game using the provided data and updates the hero list view.
+	 * 
+	 * @param event The event parameter is of type ActionEvent. It represents the event that triggered
+	 * the method, such as a button click.
+	 */
+	@FXML
     void addHero(ActionEvent event) {
         String nameValue = heroNameTxt.getText();
         String healthValue = heroHealthTxt.getText();
@@ -76,7 +82,13 @@ public class Controller implements Initializable {
         }
     }
 
-    @FXML
+    /**
+	 * The function adds a beast to a game if all the required fields are filled.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void addBeast(ActionEvent event) {
         String nameValue = beastNameTxt.getText();
         String healthValue = beastHealthTxt.getText();
@@ -102,7 +114,13 @@ public class Controller implements Initializable {
         }
     }
 
-    @FXML
+    /**
+	 * The function deletes a selected hero from a list view and updates the data source.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void deleteHero(ActionEvent event) {
         int index = heroListView.getSelectionModel().getSelectedIndex();
         if (index != -1) {
@@ -115,7 +133,13 @@ public class Controller implements Initializable {
         }
     }
 
-    @FXML
+    /**
+	 * This function deletes a selected item from a ListView and updates the data source.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void deleteBeast(ActionEvent event) {
         int index = beastListView.getSelectionModel().getSelectedIndex();
         if (index != -1) {
@@ -128,7 +152,13 @@ public class Controller implements Initializable {
         }
     }
 
-    @FXML
+    /**
+	 * This function moves the selected hero in a list up by one position.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void upHero(ActionEvent event) {
         int index = heroListView.getSelectionModel().getSelectedIndex();
         boardManager.ascendHeroIndex(index);
@@ -137,7 +167,13 @@ public class Controller implements Initializable {
         heroListView.refresh();
     }
 
-    @FXML
+    /**
+	 * The function "upBeast" is used to move a selected beast up in the list by one position.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void upBeast(ActionEvent event) {
         int index = beastListView.getSelectionModel().getSelectedIndex();
         boardManager.ascendBeastIndex(index);
@@ -146,7 +182,14 @@ public class Controller implements Initializable {
         beastListView.getSelectionModel().select(index - 1);
     }
 
-    @FXML
+    /**
+	 * The function `downHero` is used to move a selected hero down in a list and update the GUI
+	 * accordingly.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void downHero(ActionEvent event) {
         int index = heroListView.getSelectionModel().getSelectedIndex();
         boardManager.descendHeroIndex(index);
@@ -155,7 +198,13 @@ public class Controller implements Initializable {
         heroListView.refresh();
     }
 
-    @FXML
+    /**
+	 * The function "downBeast" is used to move a selected item in a ListView down by one position.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     void downBeast(ActionEvent event) {
         int index = beastListView.getSelectionModel().getSelectedIndex();
         boardManager.descendBeastIndex(index);
@@ -164,14 +213,25 @@ public class Controller implements Initializable {
         beastListView.refresh();
     }
 
-    @FXML
+    /**
+	 * The function "fightBattle" clears the battle text area and then simulates a battle using the
+	 * board manager, appending the battle logs to the text area.
+	 * 
+	 * @param event The event parameter is an ActionEvent object that represents the event that
+	 * triggered the method.
+	 */
+	@FXML
     public void fightBattle(ActionEvent event) {
         battleTxtArea.clear();
         StringBuilder battleLogs = boardManager.simulateBattle();
         battleTxtArea.appendText(battleLogs.toString());
     }
 
-    private void setComboBoxes() {
+    /**
+	 * The function sets the items of two ComboBoxes with the hero types and beast types obtained from
+	 * the board manager.
+	 */
+	private void setComboBoxes() {
         ObservableList<String> heroItems = heroTypeCmb.getItems();
         ObservableList<String> beastItems = beastTypeCmb.getItems();
         heroItems.addAll(boardManager.getHeroTypes());

@@ -19,7 +19,14 @@ public class BattleGUIApplication extends Application
         launch(args);
     }
 
-    @Override
+    /**
+	 * This function sets up the JavaFX stage and scene for a BattleGUIApp, loads the FXML resource,
+	 * sets the stage properties, and displays the stage.
+	 * 
+	 * @param primaryStage The primary stage is the main window of the JavaFX application. It
+	 * represents the top-level container for all the JavaFX content.
+	 */
+	@Override
     public void start(Stage primaryStage)
     {
         try {

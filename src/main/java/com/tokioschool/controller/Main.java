@@ -8,7 +8,11 @@ import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[] args)
+    /**
+	 * The main function prompts the user to choose between console or graphical user interface mode
+	 * and launches the corresponding application.
+	 */
+	public static void main(String[] args)
     {
         int input;
         Scanner scanner = new Scanner(System.in);
