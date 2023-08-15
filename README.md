@@ -23,6 +23,6 @@ The Battle for Middle Earth Simulator is a Java-based application that allows yo
 
 1. Clone the repository: `git clone https://github.com/IcQuackson/Battle-for-middle-earth.git`
 2. Install Maven: [Maven Installation Guide](https://maven.apache.org/install.html)
-3. **Ensure You Have AT LEAST Java 15 and Maven 3.9.0
+3. **Ensure You Have AT LEAST Java 15 and Maven 3.9.0**
 4. **Set Command Prompt Encoding (Windows Only):** If you are on Windows, ensure that the Command Prompt's encoding is set to UTF-8. You can do this by running the command `chcp 65001` in the Command Prompt before executing the application.
 3. Run the application by running the following command: `mvn clean install && mvn exec:java`
