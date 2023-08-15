@@ -7,6 +7,10 @@ import java.util.*;
 import static com.tokioschool.model.GameUnit.TEAM_BEASTS;
 import static com.tokioschool.model.GameUnit.TEAM_HEROES;
 
+/**
+ * The BattleConsole class allows the user to manage hero and beast armies, simulate battles, and
+ * navigate through a menu.
+ */
 public class BattleConsole
 {
     private BoardManager boardManager;
@@ -109,12 +113,11 @@ public class BattleConsole
         } while (input != 6);
     }
 
-    /*
-	* The `printHeroArmy()` method is responsible for printing the hero army.
-	* It first prints the label "Exército - HEROES". Then, it calls the
-	* `printArmy()` method, passing the hero army obtained from the `boardManager.showHeroArmy()`
-	* method. Finally, it prints a new line.
-	*/
+    /**
+     * The printHeroArmy function prints the hero army.
+     *
+     * @return The hero army
+     */
 	public void printHeroArmy()
     {
         System.out.printf("Exército - %s:\n", TEAM_HEROES);
@@ -122,11 +125,11 @@ public class BattleConsole
         System.out.println();
     }
 
-    /*
-	* The `printBeastArmy()` method is responsible for printing the beast army. It first prints the
-	* label "Exército - BEASTS". Then, it calls the `printArmy()` method, passing the beast army
-	* obtained from the `boardManager.showBeastArmy()` method. Finally, it prints a new line.
-	*/
+    /**
+     * The printHeroArmy function prints the hero army.
+     *
+     * @return The hero army
+     */
 	public void printBeastArmy()
     {
         System.out.printf("Exército - %s:\n", TEAM_BEASTS);
@@ -148,18 +151,31 @@ public class BattleConsole
         }
     }
 
+    /**
+     * The addHero function adds a hero to the game.
+     *
+     * @return The hero that was added
+     */
     private void addHero()
     {
         addCharacter(TEAM_HEROES);
     }
 
-    private void addBeast()
-    {
+    /**
+     * The addBeast function adds a beast to the game.
+     *
+     * @return The beast object that was added
+     */
+    private void addBeast() {
         addCharacter(TEAM_BEASTS);
     }
 
-    public void deleteHero()
-    {
+    /**
+     * The deleteHero function deletes a hero from the board.
+     *
+     * @return A boolean, true if the hero was deleted and false otherwise
+     */
+	public void deleteHero() {
         int i;
         String heroDescription;
 
@@ -170,11 +186,14 @@ public class BattleConsole
         if (!boardManager.deleteHero(i))
             System.out.println("Ocorreu um erro!\n");
         System.out.println("Herói apagado: \n" + heroDescription);
-
     }
 
-    public void deleteBeast()
-    {
+    /**
+     * The deleteBeast function deletes a beast from the board.
+     *
+     * @return Void
+     */
+	public void deleteBeast() {
         int i;
         String beastDescription;
 
@@ -187,17 +206,31 @@ public class BattleConsole
         System.out.println("Besta apagada: \n" + beastDescription);
     }
 
-    private int getHeroIndex()
-    {
+    /**
+     * The getHeroIndex function returns the index of the hero in the army.
+     *
+     * @return The index of the hero in the army
+     */
+	private int getHeroIndex() {
         return getCharacterIndex(boardManager.showHeroArmy());
     }
 
-    private int getBeastIndex()
-    {
+    /**
+     * The getBeastIndex function returns the index of the beast in the army.
+     *
+     * @return The index of the beast in the arraylist
+     */
+	private int getBeastIndex() {
         return getCharacterIndex(boardManager.showBeastArmy());
     }
 
-    public void ascendHeroIndex()
+    /**
+     * The ascendHeroIndex function is used to increment the index of the hero army.
+     *
+     * @return The index of the hero in the army
+     *
+     */
+	public void ascendHeroIndex()
     {
         int i;
 
@@ -205,15 +238,24 @@ public class BattleConsole
         boardManager.ascendHeroIndex(i);
     }
 
-    public void descendHeroIndex()
+    /**
+     * The descendHeroIndex function is used to decrement the index of the hero in the army.
+     *
+     * @return The index of the hero in the army
+     */
+	public void descendHeroIndex()
     {
-        int i;
+         int i;
 
         i = getCharacterIndex(boardManager.showHeroArmy());
         boardManager.descendHeroIndex(i);
     }
 
-    public void ascendBeastIndex()
+    /**
+    * The above code is a method in Java that is called "ascendBeastIndex". However, the code provided
+	* is incomplete and does not contain any logic or functionality.
+	*/
+	public void ascendBeastIndex()
     {
         int i;
 
@@ -221,7 +263,13 @@ public class BattleConsole
         boardManager.ascendBeastIndex(i);
     }
 
-    public void descendBeastIndex()
+    /**
+     * The descendBeastIndex function is used to decrement the index of the beast army.
+     *
+     * @return The index of the beast that is to be moved down
+     *
+     */
+	public void descendBeastIndex()
     {
         int i;
 
@@ -229,7 +277,15 @@ public class BattleConsole
         boardManager.descendBeastIndex(i);
     }
 
-
+    /**
+     * The getCharacterIndex function is used to get the index of a character in an army.
+     *
+     * @param ArrayList<String> army: Print the characters in the army
+     *
+     * @return The index of the character selected by the player
+     *
+     * @docauthor Trelent
+     */
     private int getCharacterIndex(ArrayList<String> army)
     {
         if (army.isEmpty())
@@ -245,7 +301,17 @@ public class BattleConsole
         return getInt(message, army.size()) - 1;
     }
 
-    private boolean addCharacter(String team)
+    /**
+     * The method is used to add a character to a team. It prompts the user to enter the character's
+	 * name, type, health points, and armor. It then calls the `addCharacter()` method from the
+	 * `boardManager` object to add the character to the team. If the addition is successful, it
+	 * returns true. Otherwise, it returns false.
+	 * 
+	 * @param String team
+     * @return boolean
+	 * 
+     */
+	private boolean addCharacter(String team)
     {
         String name;
         String message;
@@ -298,7 +364,17 @@ public class BattleConsole
         return true;
     }
 
-    private void printCharacter(String name, String type, int healthPoints, int armor)
+    /**
+     * The printCharacter function prints the name, type, health points and armor of a character.
+     *
+     * @param String name Print the name of the character
+     * @param String type Store the name of the character
+     * @param int healthPoints Print the health points of a character
+     * @param int armor Print the armor value of the character
+     *
+     * @return Nothing, it only prints the information of a character
+     */
+	private void printCharacter(String name, String type, int healthPoints, int armor)
     {
         System.out.printf("nome:%s tipo:%s vida:%d armadura:%d",
                 name,
@@ -307,7 +383,16 @@ public class BattleConsole
                 armor);
     }
 
-    public int getInt(String message, int numberOfOptions)
+    /**
+     * The getInt function is used to get an integer from the user.
+     * It will keep asking for input until a valid integer is given.
+     *
+     * @param String message Display a message to the user
+     * @param int numberOfOptions Set the range of valid inputs
+     *
+     * @return A number between 1 and the given parameter
+     */
+	public int getInt(String message, int numberOfOptions)
     {
         int input;
 
@@ -330,8 +415,13 @@ public class BattleConsole
         return input;
     }
 
-    public void simulateBattle()
-    {
+    /**
+     * The simulateBattle function simulates a battle between the two armies.
+     * It returns a string that describes the outcome of the battle.
+     *
+     * @return A string that tells the user what happened in the battle
+     */
+	public void simulateBattle() {
         System.out.println(boardManager.simulateBattle());
     }
 }

@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+/**
+ * The CharacterFactory class is a factory class that creates different types of GameUnit objects based
+ * on the specified CharacterType.
+ */
 public class CharacterFactory
 {
     private static final Map<CharacterType, Supplier<GameUnit>> characters = new HashMap<>();

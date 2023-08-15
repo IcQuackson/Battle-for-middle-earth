@@ -13,9 +13,16 @@ public class Troll extends Beast
     {
         super(name, TROLL, healthPoints, armor);
     }
-
-    @Override
-    protected GameUnit clone()
+    
+    /**
+	 * The function returns a new instance of the Troll class with the same name, health points, and
+	 * armor as the original instance.
+	 * 
+	 * @return The method is returning a new instance of the Troll class, with the same name, health
+	 * points, and armor as the original Troll object.
+	 */
+	@Override
+	protected GameUnit clone()
     {
         return new Troll(getName(), getHealthPoints(), getArmor());
     }

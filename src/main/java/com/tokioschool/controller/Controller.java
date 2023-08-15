@@ -13,6 +13,10 @@ import javafx.scene.control.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The Controller class is responsible for managing the user interface and handling user interactions
+ * in a game application.
+ */
 public class Controller implements Initializable {
     // Hero Creation Pane
     @FXML
@@ -42,8 +46,18 @@ public class Controller implements Initializable {
     private TextArea battleTxtArea;
     private BoardManager boardManager;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    /**
+	 * The initialize function sets up the board manager, selection modes for list views, and combo
+	 * boxes.
+	 * 
+	 * @param location The location parameter is the URL of the FXML file that contains the controller
+	 * class. It is used to specify the location of the FXML file.
+	 * @param resources The `resources` parameter is a `ResourceBundle` object that contains the
+	 * localized resources for the application. It can be used to retrieve localized strings, images,
+	 * or other resources based on the user's locale.
+	 */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
         this.boardManager = new BoardManager(new Board());
         heroListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
         beastListView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -73,7 +87,6 @@ public class Controller implements Initializable {
                 } else {
                     System.out.println("AddHero type error");
                 }
-                System.out.println("Added");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid field!");
             }
@@ -105,7 +118,6 @@ public class Controller implements Initializable {
                 } else {
                     System.out.println("AddBeast type error");
                 }
-                System.out.println("Added");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid field!");
             }

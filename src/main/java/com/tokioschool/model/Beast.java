@@ -2,6 +2,10 @@ package com.tokioschool.model;
 
 import java.util.Random;
 
+/**
+ * The Beast class is an abstract class that represents a game unit with a name, type, health points,
+ * and armor, and includes methods for calculating attack power, enemy armor, and maximum attack power.
+ */
 public abstract class Beast extends GameUnit
 {
     /**

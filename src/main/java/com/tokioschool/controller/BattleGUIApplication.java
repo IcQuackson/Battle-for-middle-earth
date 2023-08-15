@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 
+/**
+ * The BattleGUIApplication class sets up the JavaFX stage and scene for a BattleGUIApp, loads the FXML
+ * resource, and displays the stage.
+ */
 public class BattleGUIApplication extends Application
 {
     public static void main(String[] args)

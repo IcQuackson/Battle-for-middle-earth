@@ -36,17 +36,35 @@ public enum CharacterType
         return this.name;
     }
 
-    public String getTeam()
+    /**
+	 * The function returns the team name as a string.
+	 * 
+	 * @return The method is returning a String value, which is the team name.
+	 */
+	public String getTeam()
     {
         return this.team;
     }
 
-    public static CharacterType get(String name)
+    /**
+	 * The function returns the CharacterType associated with a given name.
+	 * 
+	 * @param name The name parameter is a String that represents the name of the character type.
+	 * @return The method is returning a CharacterType object.
+	 */
+	public static CharacterType get(String name)
     {
         return enumMap.get(name);
     }
 
-    static ArrayList<CharacterType> getTypesFromTeam(String team)
+    /**
+	 * The function "getTypesFromTeam" returns a list of character types that belong to a specific team
+	 * (either "heroes" or "beasts").
+	 * 
+	 * @param team A string representing the team name. It can be either "heroes" or "beasts".
+	 * @return The method is returning an ArrayList of CharacterType objects.
+	 */
+	static ArrayList<CharacterType> getTypesFromTeam(String team)
     {
         if (!team.equals(GameUnit.TEAM_HEROES) && !team.equals(GameUnit.TEAM_BEASTS))
             return null;
