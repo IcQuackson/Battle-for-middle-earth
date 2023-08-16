@@ -19,6 +19,14 @@ The Battle for Middle Earth Simulator is a Java-based application that allows yo
 
 - **Battle Log**: View a detailed log of each battle, providing insights into the progression and results.
 
+## Concepts Learned
+- 1. MVC
+- 2. Factory Method Design Pattern
+- 3. Facade Design Pattern
+- 2. JavaFX properties, event handling, layout panes
+- 3. FXML
+- 4. Maven
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/IcQuackson/Battle-for-middle-earth.git`
