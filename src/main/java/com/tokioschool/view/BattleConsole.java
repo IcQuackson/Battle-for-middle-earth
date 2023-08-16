@@ -284,7 +284,6 @@ public class BattleConsole
      *
      * @return The index of the character selected by the player
      *
-     * @docauthor Trelent
      */
     private int getCharacterIndex(ArrayList<String> army)
     {
